@@ -16,9 +16,16 @@ class PlayersController < ApplicationController
 
   def edit
     @player = Player.find(params[:id])
+    @team = Team.all
+    # Here you need to get all the teams from the DB
+    
   end
 
-  
+  def update
+    player = Player.find(params[:id])
+    player.update(player_params)
+    redirect_to(players_path)
+  end  
 
   def show
     @player = Player.find(params[:id])
