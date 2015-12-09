@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sex: MyString
+  position: MyString
+  offence: 9.99
+  defence: 9.99
+  popularity: 1
+
+two:
+  name: MyString
+  sex: MyString
+  position: MyString
+  offence: 9.99
+  defence: 9.99
+  popularity: 1
