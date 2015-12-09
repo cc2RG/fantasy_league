@@ -6,10 +6,14 @@ class PlayersController < ApplicationController
 
   def new
     @player = Player.new
+    @team = Team.all
   end
 
   def create
-    Player.create(player_params)
+    player = Player.create(player_params)
+    team = Team.find(params["player"] ["team_id"].to_i)
+    #binding-pry;
+    team.players << player
     redirect_to(players_path)
   end  
 
@@ -23,6 +27,7 @@ class PlayersController < ApplicationController
 
   def update
     player = Player.find(params[:id])
+    team_id = Team.find(params[:id])
     player.update(player_params)
     redirect_to(players_path)
   end  

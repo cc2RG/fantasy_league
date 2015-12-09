@@ -17,9 +17,10 @@
   <%= f.label :popularity %>
   <%= f.text_field :popularity %>
   <br>
-  <%= f.label :team %>
+  <%= f.label :team_id %>
   <% options = options_from_collection_for_select(@team, 'id', 'name') %>
-  <%= f.select :name, options %>
+  <%= f.select :team_id, options %>
   <br>
+
   <%= f.submit 'Update player!' %>
 <% end %>
