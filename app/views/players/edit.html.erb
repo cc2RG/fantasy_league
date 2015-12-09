@@ -1,0 +1,21 @@
+<%= form_for @player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :sex %>
+  <%= f.text_field :sex %>
+  <br>
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+  <br>
+  <%= f.label :offence %>
+  <%= f.text_field :offence %>
+  <br>
+  <%= f.label :defence %>
+  <%= f.text_field :defence %>
+  <br>
+  <%= f.label :popularity %>
+  <%= f.text_field :popularity %>
+  <br>
+  <%= f.submit 'Update player!' %>
+<% end %>
