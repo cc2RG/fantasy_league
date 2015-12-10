@@ -27,7 +27,7 @@ class PlayersController < ApplicationController
 
   def update
     player = Player.find(params[:id])
-    team_id = Team.find(params[:id])
+    team_id = Team.find(params["player"]["team_id"].to_i)
     player.update(player_params)
     redirect_to(players_path)
   end  
